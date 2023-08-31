@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#EDEFF0"
+    android:padding="@dimen/_20dp">
+
+    <RelativeLayout
+        android:id="@+id/rel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <RelativeLayout
+            android:id="@+id/relBack"
+            android:layout_width="@dimen/_35dp"
+            android:layout_height="@dimen/_35dp"
+            android:foreground="?attr/selectableItemBackground"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="@dimen/_20dp"
+                android:layout_height="@dimen/_20dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/ic_left_arrow"
+                android:tint="@color/dark_blue_color">
+
+            </ImageView>
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/txtDashboardTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_5dp"
+            android:layout_toRightOf="@id/relBack"
+            android:text="@string/new_products"
+            android:gravity="center"
+            android:fontFamily="@font/montserrat_bold"
+            android:textColor="@color/dark_blue_color"
+            android:textSize="@dimen/_20dp"
+            android:textStyle="bold">
+
+        </TextView>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rel"
+        android:orientation="vertical"
+        android:layout_marginTop="@dimen/_15dp">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/view_search"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginLeft="@dimen/_10dp"
+            android:layout_marginTop="@dimen/_5dp"
+            android:layout_marginRight="@dimen/_10dp"
+            app:cardBackgroundColor="@android:color/white"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="5dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:animateLayoutChanges="true">
+
+                <EditText
+                    android:id="@+id/edt_search"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:gravity="center|left"
+                    android:hint="Search machine"
+                    android:imeOptions="actionSearch|flagNoExtractUi"
+                    android:inputType="textCapCharacters"
+                    android:padding="14dp"
+                    android:singleLine="true"
+                    android:textColor="@android:color/black"
+                    android:textSize="14sp" />
+
+                <RelativeLayout
+                    android:layout_width="45dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_gravity="right"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/img_search"
+                        android:layout_width="@dimen/_55dp"
+                        android:layout_height="@dimen/_55dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:padding="14dp"
+                        android:src="@drawable/ic_search"
+                        android:tint="@color/dark_blue_color"
+                        android:visibility="visible" />
+
+                    <ImageView
+                        android:id="@+id/img_close"
+                        android:layout_width="@dimen/_55dp"
+                        android:layout_height="@dimen/_55dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:padding="14dp"
+                        android:src="@drawable/ic_close"
+                        android:tint="@color/dark_blue_color"
+                        android:visibility="gone" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerNewProductsList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_15dp"
+            android:layoutAnimation="@anim/layout_animation_fall_down">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+        <include
+            layout="@layout/no_data_layout"
+            android:visibility="gone">
+
+        </include>
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:paddingTop="@dimen/_5dp"
+    android:paddingBottom="@dimen/_10dp">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        app:cardCornerRadius="@dimen/_5dp"
+        app:cardBackgroundColor="@color/white"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <LinearLayout
+                android:id="@+id/linOrderStatus"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1.4"
+                android:background="@drawable/light_black_round_corner_1"
+                android:backgroundTint="@color/green_box_color">
+
+                <TextView
+                    android:id="@+id/txtOrderStatus"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/delivered"
+                    android:textSize="@dimen/_15dp"
+                    android:textColor="@color/white"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:firstBaselineToTopHeight="0dp"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:includeFontPadding="false"
+                    android:rotation="270">
+
+                </TextView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                android:layout_weight="0.3"
+                android:paddingLeft="@dimen/_10dp"
+                android:paddingTop="@dimen/_10dp"
+                android:paddingBottom="@dimen/_10dp"
+                android:layout_gravity="center">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_weight="1"
+                    android:weightSum="2">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="0.5">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ordered Item"
+                        android:textSize="@dimen/_12dp"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:textColor="@color/light_blue_icon_color"
+                        >
+
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/txtItemName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Glide O Bind"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/_15dp"
+                        android:fontFamily="@font/montserrat_semibold"
+                        android:textColor="@color/dark_blue_color"
+                        >
+
+                    </TextView>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:layout_weight="1.5"
+
+                        >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Qty"
+                            android:textSize="@dimen/_12dp"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:textColor="@color/light_blue_icon_color"
+                            android:layout_gravity="center"
+                            >
+
+                        </TextView>
+
+                        <TextView
+                            android:id="@+id/txtItemQty"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="01"
+                            android:textStyle="bold"
+                            android:textSize="@dimen/_15dp"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:fontFamily="@font/montserrat_semibold"
+                            android:textColor="@color/dark_blue_color"
+                            >
+
+                        </TextView>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linShortage"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:visibility="invisible"
+                    android:layout_weight="1">
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnShortage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/_30dp"
+                        android:text="@string/shoetage"
+                        android:background="@drawable/light_black_round_corner_1"
+                        android:backgroundTint="@color/red"
+                        android:textSize="@dimen/_15dp"
+                        android:textColor="@color/white"
+                        android:paddingLeft="@dimen/_10dp"
+                        android:paddingRight="@dimen/_10dp">
+
+                    </androidx.appcompat.widget.AppCompatButton>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linBOM"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1.3"
+                android:background="@drawable/light_black_round_corner_1"
+                android:backgroundTint="@color/blue">
+
+                <TextView
+                    android:id="@+id/txtBom"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/bom"
+                    android:textSize="@dimen/_15dp"
+                    android:textColor="@color/white"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:gravity="center">
+
+                </TextView>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+
+
+
+
+</LinearLayout>

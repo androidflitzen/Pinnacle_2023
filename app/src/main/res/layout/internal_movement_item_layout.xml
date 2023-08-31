@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#EDEFF0"
+    android:padding="@dimen/_20dp">
+
+    <RelativeLayout
+        android:id="@+id/rel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <RelativeLayout
+            android:id="@+id/relBack"
+            android:layout_width="@dimen/_35dp"
+            android:layout_height="@dimen/_35dp"
+            android:foreground="?attr/selectableItemBackground"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="@dimen/_20dp"
+                android:layout_height="@dimen/_20dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/ic_left_arrow"
+                android:tint="@color/dark_blue_color">
+
+            </ImageView>
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/txtDashboardTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_5dp"
+            android:layout_toRightOf="@id/relBack"
+            android:text="@string/internal_movements"
+            android:gravity="center"
+            android:textColor="@color/dark_blue_color"
+            android:fontFamily="@font/montserrat_bold"
+            android:textSize="@dimen/_20dp"
+            android:textStyle="bold">
+
+        </TextView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="right|center"
+            android:layout_toRightOf="@id/txtDashboardTitle">
+
+            <ImageView
+                android:layout_width="@dimen/_20dp"
+                android:layout_height="@dimen/_20dp"
+                android:src="@drawable/ic_clock"
+                android:tint="@color/login_bg_color"
+                android:layout_gravity="center">
+
+            </ImageView>
+
+            <TextView
+                android:id="@+id/txtDate"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="08 Sept 2021,"
+                android:layout_marginLeft="@dimen/_5dp"
+                android:textSize="@dimen/_12dp"
+                android:gravity="center"
+                android:fontFamily="@font/montserrat_regular"
+                android:textColor="@color/light_blue_icon_color"
+                >
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/txtTime"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text=" 3:55 pm"
+                android:textSize="@dimen/_12dp"
+                android:gravity="center"
+                android:fontFamily="@font/montserrat_regular"
+                android:textColor="@color/black"
+                >
+
+            </TextView>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/lin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rel"
+        android:layout_marginTop="@dimen/_20dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="@dimen/_40dp"
+                android:layout_height="@dimen/_40dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_crate">
+
+            </ImageView>
+
+            <TextView
+                android:id="@+id/txtFrom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Crate- D002"
+                android:textColor="@color/dark_blue_color"
+                android:fontFamily="@font/montserrat_semibold"
+                android:textSize="@dimen/_20dp">
+
+            </TextView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="@dimen/_40dp"
+                android:layout_height="@dimen/_40dp"
+                android:layout_gravity="center">
+
+            </ImageView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="  Moved to  "
+                android:textColor="@color/green_box_color"
+                android:fontFamily="@font/montserrat_regular"
+                android:textSize="@dimen/_20dp">
+
+            </TextView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="@dimen/_40dp"
+                android:layout_height="@dimen/_40dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_crate">
+
+            </ImageView>
+
+            <TextView
+                android:id="@+id/txtTo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Crate- D001"
+                android:textColor="@color/dark_blue_color"
+                android:fontFamily="@font/montserrat_semibold"
+                android:textSize="@dimen/_20dp">
+
+            </TextView>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lin"
+        android:orientation="vertical"
+        android:layout_marginTop="@dimen/_20dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Items"
+                android:textStyle="bold"
+                android:fontFamily="@font/montserrat_bold"
+                android:textSize="@dimen/_18dp"
+                android:textColor="@color/dark_blue_color">
+
+            </TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="QTY"
+                android:textStyle="bold"
+                android:fontFamily="@font/montserrat_bold"
+                android:textSize="@dimen/_18dp"
+                android:paddingRight="@dimen/_10dp"
+                android:layout_alignParentRight="true"
+                android:textColor="@color/dark_blue_color">
+
+            </TextView>
+
+        </RelativeLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerInternal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layoutAnimation="@anim/layout_animation_fall_down">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+        <include
+            layout="@layout/no_data_layout"
+            android:visibility="gone">
+
+        </include>
+
+    </LinearLayout>
+
+</RelativeLayout>

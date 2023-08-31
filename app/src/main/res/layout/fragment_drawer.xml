@@ -1,0 +1,748 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingTop="@dimen/_30dp">
+
+            <ImageView
+                android:id="@+id/imgMenuTop"
+                android:layout_width="@dimen/_30dp"
+                android:layout_height="@dimen/_30dp"
+                android:src="@drawable/ic_menu"
+                android:layout_gravity="right"
+                android:layout_marginRight="@dimen/_20dp"
+                android:layout_marginLeft="@dimen/_10dp"
+                android:tint="@color/dark_blue_color"
+                android:foreground="?attr/selectableItemBackground"
+                android:visibility="gone"
+                >
+
+            </ImageView>
+
+            <LinearLayout
+                android:id="@+id/linHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="@dimen/_10dp"
+                android:visibility="gone">
+
+                <com.flitzen.pinnacle.utils.CircleImageView
+                    android:id="@+id/imgProfile"
+                    android:layout_width="@dimen/_40dp"
+                    android:layout_height="@dimen/_40dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_user">
+
+                </com.flitzen.pinnacle.utils.CircleImageView>
+
+                <TextView
+                    android:id="@+id/txtUserName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Tapesh Mahananda"
+                    android:gravity="center"
+                    android:layout_marginTop="@dimen/_5dp"
+                    android:textSize="@dimen/_18dp"
+                    android:textColor="@color/dark_blue_color"
+                    android:textStyle="bold">
+
+                </TextView>
+
+                <TextView
+                    android:id="@+id/txtUserRole"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Store In charge"
+                    android:gravity="center"
+                    android:layout_marginTop="@dimen/_5dp"
+                    android:textSize="@dimen/_12dp"
+                    android:textColor="@color/light_blue_icon_color">
+
+                </TextView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linOpenDrawer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone"
+                android:padding="@dimen/_10dp">
+
+                <ImageView
+                    android:id="@+id/imgMenuBottom"
+                    android:layout_width="@dimen/_30dp"
+                    android:layout_height="@dimen/_30dp"
+                    android:src="@drawable/ic_menu"
+                    android:layout_marginLeft="@dimen/_10dp"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:tint="@color/dark_blue_color">
+
+                </ImageView>
+
+                <LinearLayout
+                    android:id="@+id/linHome"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:layout_marginTop="@dimen/_25dp">
+
+                    <ImageView
+                        android:id="@+id/imgHome"
+                        android:layout_width="@dimen/_30dp"
+                        android:layout_height="@dimen/_30dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/_10dp"
+                        android:layout_marginRight="@dimen/_10dp"
+                        android:src="@drawable/ic_home"
+                        android:tint="@color/light_blue_icon_color">
+
+                    </ImageView>
+
+                    <TextView
+                        android:id="@+id/txtHome"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="center"
+                        android:text="@string/menu_home"
+                        android:textColor="@color/light_blue_icon_color"
+                        android:textSize="@dimen/_18dp">
+
+                    </TextView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linPendingOrder"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_15dp"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/imgPending"
+                        android:layout_width="@dimen/_30dp"
+                        android:layout_height="@dimen/_30dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/_10dp"
+                        android:layout_marginRight="@dimen/_10dp"
+                        android:src="@drawable/ic_pending"
+                        android:tint="@color/light_blue_icon_color">
+
+                    </ImageView>
+
+                    <TextView
+                        android:id="@+id/txtPendingOrder"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="center"
+                        android:text="@string/pending_orders"
+                        android:textColor="@color/light_blue_icon_color"
+                        android:textSize="@dimen/_18dp">
+
+                    </TextView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linDeliveredOrder"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:layout_marginTop="@dimen/_15dp"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/imgDelivered"
+                        android:layout_width="@dimen/_30dp"
+                        android:layout_height="@dimen/_30dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/_10dp"
+                        android:layout_marginRight="@dimen/_10dp"
+                        android:src="@drawable/ic_delivered_order"
+                        android:tint="@color/light_blue_icon_color">
+
+                    </ImageView>
+
+                    <TextView
+                        android:id="@+id/txtDeliverdOrder"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="center"
+                        android:text="@string/delivered_orders"
+                        android:textColor="@color/light_blue_icon_color"
+                        android:textSize="@dimen/_18dp">
+
+                    </TextView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linStockCheck"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:layout_marginTop="@dimen/_15dp"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/imgStockCheck"
+                        android:layout_width="@dimen/_30dp"
+                        android:layout_height="@dimen/_30dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/_10dp"
+                        android:layout_marginRight="@dimen/_10dp"
+                        android:src="@drawable/ic_stock_check"
+                        android:tint="@color/light_blue_icon_color">
+
+                    </ImageView>
+
+                    <TextView
+                        android:id="@+id/txtStockCheck"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="center"
+                        android:text="@string/stock_check"
+                        android:textColor="@color/light_blue_icon_color"
+                        android:textSize="@dimen/_18dp">
+
+                    </TextView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linStockAlerts"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:layout_marginTop="@dimen/_15dp"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/imgStockAlerts"
+                        android:layout_width="@dimen/_30dp"
+                        android:layout_height="@dimen/_30dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/_10dp"
+                        android:layout_marginRight="@dimen/_10dp"
+                        android:src="@drawable/ic_stock_alerts"
+                        android:tint="@color/light_blue_icon_color">
+
+                    </ImageView>
+
+                    <TextView
+                        android:id="@+id/txtStockAlerts"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="center"
+                        android:text="@string/stock_alerts"
+                        android:textColor="@color/light_blue_icon_color"
+                        android:textSize="@dimen/_18dp">
+
+                    </TextView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linPurchaseOrder"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:layout_marginTop="@dimen/_15dp"
+                    android:visibility="gone"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/imgPurchase"
+                        android:layout_width="@dimen/_30dp"
+                        android:layout_height="@dimen/_30dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/_10dp"
+                        android:layout_marginRight="@dimen/_10dp"
+                        android:src="@drawable/ic_purchuse_order"
+                        android:tint="@color/light_blue_icon_color">
+
+                    </ImageView>
+
+                    <TextView
+                        android:id="@+id/txtPurchaseOrder"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="center"
+                        android:text="@string/purchase_orders"
+                        android:textColor="@color/light_blue_icon_color"
+                        android:textSize="@dimen/_18dp">
+
+                    </TextView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linInternalMovements"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:layout_marginTop="@dimen/_15dp"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/imgInternalMove"
+                        android:layout_width="@dimen/_30dp"
+                        android:layout_height="@dimen/_30dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/_10dp"
+                        android:layout_marginRight="@dimen/_10dp"
+                        android:src="@drawable/ic_internal_movement"
+                        android:tint="@color/light_blue_icon_color">
+
+                    </ImageView>
+
+                    <TextView
+                        android:id="@+id/txtInternalMovements"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="center"
+                        android:singleLine="true"
+                        android:text="@string/internal_movements"
+                        android:textColor="@color/light_blue_icon_color"
+                        android:textSize="@dimen/_18dp">
+
+                    </TextView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linJobWork"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:layout_marginTop="@dimen/_15dp"
+                    android:visibility="gone"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/imgJobWork"
+                        android:layout_width="@dimen/_30dp"
+                        android:layout_height="@dimen/_30dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/_10dp"
+                        android:layout_marginRight="@dimen/_10dp"
+                        android:src="@drawable/ic_job_work"
+                        android:tint="@color/light_blue_icon_color">
+
+                    </ImageView>
+
+                    <TextView
+                        android:id="@+id/txtJobWork"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="center"
+                        android:text="@string/job_works"
+                        android:textColor="@color/light_blue_icon_color"
+                        android:textSize="@dimen/_18dp">
+
+                    </TextView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linLogout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:layout_marginTop="@dimen/_15dp"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/imgLogout"
+                        android:layout_width="@dimen/_30dp"
+                        android:layout_height="@dimen/_30dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/_10dp"
+                        android:layout_marginRight="@dimen/_10dp"
+                        android:src="@drawable/ic_logout"
+                        android:tint="@color/light_blue_icon_color">
+
+                    </ImageView>
+
+                    <TextView
+                        android:id="@+id/txtLogout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="center"
+                        android:text="@string/logout"
+                        android:textColor="@color/light_blue_icon_color"
+                        android:textSize="@dimen/_18dp">
+
+                    </TextView>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linCloseDrawer"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/_10dp">
+
+                <ImageView
+                    android:id="@+id/imgMenuBottom1"
+                    android:layout_width="@dimen/_30dp"
+                    android:layout_height="@dimen/_30dp"
+                    android:src="@drawable/ic_menu"
+                    android:layout_gravity="center"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:tint="@color/dark_blue_color">
+
+                </ImageView>
+
+                <LinearLayout
+                    android:id="@+id/linHome1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:layout_marginTop="@dimen/_25dp">
+
+                    <ImageView
+                        android:id="@+id/imgHome1"
+                        android:layout_width="@dimen/_30dp"
+                        android:layout_height="@dimen/_30dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/_10dp"
+                        android:layout_marginRight="@dimen/_10dp"
+                        android:src="@drawable/ic_home"
+                        android:tint="@color/light_blue_icon_color">
+
+                    </ImageView>
+
+                    <TextView
+                        android:id="@+id/txtHome1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="center"
+                        android:text="@string/menu_home"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:textColor="@color/light_blue_icon_color"
+                        android:textSize="@dimen/_18dp">
+
+                    </TextView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linPendingOrder1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:layout_marginTop="@dimen/_15dp"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/imgPending1"
+                        android:layout_width="@dimen/_30dp"
+                        android:layout_height="@dimen/_30dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/_10dp"
+                        android:layout_marginRight="@dimen/_10dp"
+                        android:src="@drawable/ic_pending"
+                        android:tint="@color/light_blue_icon_color">
+
+                    </ImageView>
+
+                    <TextView
+                        android:id="@+id/txtPendingOrder1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="center"
+                        android:text="@string/pending_orders"
+                        android:textColor="@color/light_blue_icon_color"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:textSize="@dimen/_18dp">
+
+                    </TextView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linDeliveredOrder1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:layout_marginTop="@dimen/_15dp"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/imgDelivered1"
+                        android:layout_width="@dimen/_30dp"
+                        android:layout_height="@dimen/_30dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/_10dp"
+                        android:layout_marginRight="@dimen/_10dp"
+                        android:src="@drawable/ic_delivered_order"
+                        android:tint="@color/light_blue_icon_color">
+
+                    </ImageView>
+
+                    <TextView
+                        android:id="@+id/txtDeliverdOrder1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="center"
+                        android:text="@string/delivered_orders"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:textColor="@color/light_blue_icon_color"
+                        android:textSize="@dimen/_18dp">
+
+                    </TextView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linStockCheck1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:layout_marginTop="@dimen/_15dp"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/imgStockCheck1"
+                        android:layout_width="@dimen/_30dp"
+                        android:layout_height="@dimen/_30dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/_10dp"
+                        android:layout_marginRight="@dimen/_10dp"
+                        android:src="@drawable/ic_stock_check"
+                        android:tint="@color/light_blue_icon_color">
+
+                    </ImageView>
+
+                    <TextView
+                        android:id="@+id/txtStockCheck1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="center"
+                        android:text="@string/stock_check"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:textColor="@color/light_blue_icon_color"
+                        android:textSize="@dimen/_18dp">
+
+                    </TextView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linStockAlerts1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:layout_marginTop="@dimen/_15dp"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/imgStockAlerts1"
+                        android:layout_width="@dimen/_30dp"
+                        android:layout_height="@dimen/_30dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/_10dp"
+                        android:layout_marginRight="@dimen/_10dp"
+                        android:src="@drawable/ic_stock_alerts"
+                        android:tint="@color/light_blue_icon_color">
+
+                    </ImageView>
+
+                    <TextView
+                        android:id="@+id/txtStockAlerts1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="center"
+                        android:text="@string/stock_alerts"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:textColor="@color/light_blue_icon_color"
+                        android:textSize="@dimen/_18dp">
+
+                    </TextView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linPurchaseOrder1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:layout_marginTop="@dimen/_15dp"
+                    android:visibility="gone"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/imgPurchase1"
+                        android:layout_width="@dimen/_30dp"
+                        android:layout_height="@dimen/_30dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/_10dp"
+                        android:layout_marginRight="@dimen/_10dp"
+                        android:src="@drawable/ic_purchuse_order"
+                        android:tint="@color/light_blue_icon_color">
+
+                    </ImageView>
+
+                    <TextView
+                        android:id="@+id/txtPurchaseOrder1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="center"
+                        android:text="@string/purchase_orders"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:textColor="@color/light_blue_icon_color"
+                        android:textSize="@dimen/_18dp">
+
+                    </TextView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linInternalMovements1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:layout_marginTop="@dimen/_15dp"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/imgInternalMove1"
+                        android:layout_width="@dimen/_30dp"
+                        android:layout_height="@dimen/_30dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/_10dp"
+                        android:layout_marginRight="@dimen/_10dp"
+                        android:src="@drawable/ic_internal_movement"
+                        android:tint="@color/light_blue_icon_color">
+
+                    </ImageView>
+
+                    <TextView
+                        android:id="@+id/txtInternalMovements1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="center"
+                        android:text="@string/internal_movements"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:textColor="@color/light_blue_icon_color"
+                        android:textSize="@dimen/_18dp">
+
+                    </TextView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linJobWork1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:layout_marginTop="@dimen/_15dp"
+                    android:visibility="gone"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/imgJobWork1"
+                        android:layout_width="@dimen/_30dp"
+                        android:layout_height="@dimen/_30dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/_10dp"
+                        android:layout_marginRight="@dimen/_10dp"
+                        android:src="@drawable/ic_job_work"
+                        android:tint="@color/light_blue_icon_color">
+
+                    </ImageView>
+
+                    <TextView
+                        android:id="@+id/txtJobWork1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="center"
+                        android:text="@string/job_works"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:textColor="@color/light_blue_icon_color"
+                        android:textSize="@dimen/_18dp">
+
+                    </TextView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linLogout1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:layout_marginTop="@dimen/_15dp"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/imgLogout1"
+                        android:layout_width="@dimen/_30dp"
+                        android:layout_height="@dimen/_30dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/_10dp"
+                        android:layout_marginRight="@dimen/_10dp"
+                        android:src="@drawable/ic_logout"
+                        android:tint="@color/light_blue_icon_color">
+
+                    </ImageView>
+
+                    <TextView
+                        android:id="@+id/txtLogout1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="center"
+                        android:text="@string/logout"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:textColor="@color/light_blue_icon_color"
+                        android:textSize="@dimen/_18dp">
+
+                    </TextView>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

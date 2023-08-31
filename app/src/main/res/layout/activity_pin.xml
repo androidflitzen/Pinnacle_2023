@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".activity.LoginActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:fillViewport="true"
+        android:scrollbars="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1.2">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ic_login_pinnacle_bg">
+
+                </ImageView>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.8"
+                android:paddingLeft="@dimen/_35sdp"
+                android:paddingTop="30dp"
+                android:paddingRight="@dimen/_35sdp">
+
+                <LinearLayout
+                    android:id="@+id/linSignIn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_24sdp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrat_extrabold"
+                        android:gravity="center"
+                        android:text="Enter 4-digit PIN"
+                        android:textColor="@color/dark_blue_color"
+                        android:textSize="@dimen/_16sdp"
+                        android:textStyle="bold">
+
+                    </TextView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lin4pin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/linSignIn"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="@dimen/_30sdp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+
+                    <RelativeLayout
+                        android:id="@+id/rel1"
+                        android:layout_width="@dimen/_21sdp"
+                        android:layout_height="@dimen/_21sdp"
+                        android:layout_margin="@dimen/_10dp"
+                        android:layout_marginTop="@dimen/_5dp"
+                        android:background="@drawable/pin_light_black_round_corner">
+
+                        <EditText
+                            android:id="@+id/edtPin1"
+                            android:layout_width="@dimen/_11sdp"
+                            android:layout_height="@dimen/_11sdp"
+                            android:layout_centerInParent="true"
+                            android:background="@null"
+                            android:cursorVisible="false"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:gravity="center"
+                            android:imeOptions="flagNoExtractUi"
+                            android:importantForAutofill="no"
+                            android:inputType="number"
+                            android:maxLength="1"
+                            android:maxLines="1"
+                            android:singleLine="true"
+                            android:textColor="@color/login_bg_color"
+                            android:textSize="@dimen/_13dp">
+
+                        </EditText>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rel2"
+                        android:layout_width="@dimen/_21sdp"
+                        android:layout_height="@dimen/_21sdp"
+                        android:layout_margin="@dimen/_10dp"
+                        android:layout_marginTop="@dimen/_5dp"
+                        android:background="@drawable/pin_light_black_round_corner">
+
+                        <EditText
+                            android:id="@+id/edtPin2"
+                            android:layout_width="@dimen/_11sdp"
+                            android:layout_height="@dimen/_11sdp"
+                            android:layout_centerInParent="true"
+                            android:background="@null"
+                            android:cursorVisible="false"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:gravity="center"
+                            android:imeOptions="flagNoExtractUi"
+                            android:importantForAutofill="no"
+                            android:inputType="number"
+                            android:maxLength="1"
+                            android:maxLines="1"
+                            android:singleLine="true"
+                            android:textColor="@color/login_bg_color"
+                            android:textSize="@dimen/_13dp">
+
+                        </EditText>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rel3"
+                        android:layout_width="@dimen/_21sdp"
+                        android:layout_height="@dimen/_21sdp"
+                        android:layout_margin="@dimen/_10dp"
+                        android:layout_marginTop="@dimen/_5dp"
+                        android:background="@drawable/pin_light_black_round_corner">
+
+                        <EditText
+                            android:id="@+id/edtPin3"
+                            android:layout_width="@dimen/_11sdp"
+                            android:layout_height="@dimen/_11sdp"
+                            android:layout_centerInParent="true"
+                            android:background="@null"
+                            android:cursorVisible="false"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:gravity="center"
+                            android:imeOptions="flagNoExtractUi"
+                            android:importantForAutofill="no"
+                            android:inputType="number"
+                            android:maxLength="1"
+                            android:maxLines="1"
+                            android:singleLine="true"
+                            android:textColor="@color/login_bg_color"
+                            android:textSize="@dimen/_13dp">
+
+                        </EditText>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rel4"
+                        android:layout_width="@dimen/_21sdp"
+                        android:layout_height="@dimen/_21sdp"
+                        android:layout_margin="@dimen/_10dp"
+                        android:layout_marginTop="@dimen/_5dp"
+                        android:background="@drawable/pin_light_black_round_corner">
+
+                        <EditText
+                            android:id="@+id/edtPin4"
+                            android:layout_width="@dimen/_11sdp"
+                            android:layout_height="@dimen/_11sdp"
+                            android:layout_centerInParent="true"
+                            android:background="@null"
+                            android:cursorVisible="false"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:gravity="center"
+                            android:imeOptions="flagNoExtractUi"
+                            android:importantForAutofill="no"
+                            android:inputType="number"
+                            android:maxLength="1"
+                            android:maxLines="1"
+                            android:singleLine="true"
+                            android:textColor="@color/login_bg_color"
+                            android:textSize="@dimen/_13dp">
+
+                        </EditText>
+
+                    </RelativeLayout>
+
+                    <!--    <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/btnLogin"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/_30dp"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="@dimen/_30dp"
+                            android:background="@drawable/light_black_round_corner"
+                            android:backgroundTint="@color/login_bg_color"
+                            android:foreground="?attr/selectableItemBackground"
+                            android:text="Log In"
+                            android:textAllCaps="false"
+                            android:fontFamily="@font/montserrat_bold"
+                            android:textColor="@color/white">
+
+                        </androidx.appcompat.widget.AppCompatButton>-->
+
+                </LinearLayout>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnSubmit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_23sdp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginBottom="@dimen/_40dp"
+                    android:background="@drawable/pin__light_black_round_corner"
+                    android:backgroundTint="@color/login_bg_color"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:paddingLeft="@dimen/_20sdp"
+                    android:paddingRight="@dimen/_20sdp"
+                    android:text="Submit"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_11sdp">
+
+                </androidx.appcompat.widget.AppCompatButton>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

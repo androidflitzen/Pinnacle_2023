@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EDEFF0">
+
+   <!-- <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">-->
+
+        <RelativeLayout
+            android:id="@+id/rel"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="@dimen/_20dp">
+
+            <LinearLayout
+                android:id="@+id/rel1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:id="@+id/relBack"
+                    android:layout_width="@dimen/_35dp"
+                    android:layout_height="@dimen/_35dp"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="@dimen/_20dp"
+                        android:layout_height="@dimen/_20dp"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/ic_left_arrow"
+                        android:tint="@color/dark_blue_color">
+
+                    </ImageView>
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/txtDashboardTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_5dp"
+                    android:layout_toRightOf="@id/relBack"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:text="@string/pending_orders"
+                    android:textColor="@color/dark_blue_color"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:textSize="@dimen/_20dp"
+                    android:textStyle="bold">
+
+                </TextView>
+
+
+            </LinearLayout>
+
+            <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+                android:id="@+id/swipe"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/rel1">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerPendingOrder"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/_20dp">
+
+                </androidx.recyclerview.widget.RecyclerView>
+
+            </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+            <include
+                layout="@layout/no_data_layout"
+                android:visibility="gone">
+
+            </include>
+
+        </RelativeLayout>
+
+   <!-- </ScrollView>-->
+
+</RelativeLayout>

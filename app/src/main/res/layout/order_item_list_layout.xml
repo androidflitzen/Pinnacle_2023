@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EDEFF0"
+    android:padding="@dimen/_20dp">
+
+    <RelativeLayout
+        android:id="@+id/rel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <RelativeLayout
+            android:id="@+id/relBack"
+            android:layout_width="@dimen/_35dp"
+            android:layout_height="@dimen/_35dp"
+            android:foreground="?attr/selectableItemBackground"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="@dimen/_20dp"
+                android:layout_height="@dimen/_20dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/ic_left_arrow"
+                android:tint="@color/dark_blue_color">
+
+            </ImageView>
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/txtOrderNo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_5dp"
+            android:layout_toRightOf="@id/relBack"
+            android:text="Order - 102"
+            android:gravity="center"
+            android:textColor="@color/dark_blue_color"
+            android:fontFamily="@font/montserrat_bold"
+            android:textSize="@dimen/_20dp"
+            android:textStyle="bold">
+
+        </TextView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="right|center"
+            android:layout_toRightOf="@id/txtDashboardTitle">
+
+            <ImageView
+                android:layout_width="@dimen/_20dp"
+                android:layout_height="@dimen/_20dp"
+                android:src="@drawable/ic_clock"
+                android:tint="@color/login_bg_color"
+                android:layout_gravity="center">
+
+            </ImageView>
+
+            <TextView
+                android:id="@+id/txtDate"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="08 Sept 2021,"
+                android:layout_marginLeft="@dimen/_5dp"
+                android:textSize="@dimen/_12dp"
+                android:gravity="center"
+                android:fontFamily="@font/montserrat_regular"
+                android:textColor="@color/light_blue_icon_color"
+                >
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/txtTime"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text=" 3:55 pm"
+                android:textSize="@dimen/_12dp"
+                android:gravity="center"
+                android:fontFamily="@font/montserrat_regular"
+                android:textColor="@color/black"
+                >
+
+            </TextView>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/lin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rel"
+        android:layout_marginTop="@dimen/_20dp"
+        android:orientation="horizontal">
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/customer"
+            android:textSize="@dimen/_15dp"
+            android:fontFamily="@font/montserrat_regular"
+            android:textColor="@color/light_blue_icon_color">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/txtCustomerName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Customer Name"
+            android:textSize="@dimen/_15dp"
+            android:fontFamily="@font/montserrat_semibold"
+            android:textColor="@color/dark_blue_color"
+            android:layout_marginLeft="@dimen/_10dp">
+
+        </TextView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lin"
+        android:orientation="vertical"
+        android:layout_marginTop="@dimen/_20dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ordered Items"
+            android:textStyle="bold"
+            android:fontFamily="@font/montserrat_bold"
+            android:textSize="@dimen/_18dp"
+            android:textColor="@color/dark_blue_color">
+
+        </TextView>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerOrderItem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layoutAnimation="@anim/layout_animation_fall_down">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+        <include
+            layout="@layout/no_data_layout"
+            android:visibility="gone">
+
+        </include>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

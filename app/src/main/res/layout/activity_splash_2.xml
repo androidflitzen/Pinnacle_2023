@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.SplashActivity_2"
+    android:weightSum="2"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/splash_2_img"
+        android:paddingHorizontal="@dimen/_30dp"
+        android:layout_weight="0.3"
+        >
+
+    </ImageView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:text="@string/entire_inventory_at_your_finger_tips"
+        android:layout_weight="1.7"
+        android:textSize="@dimen/_18dp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:fontFamily="@font/montserrat_bold"
+        android:gravity="center">
+
+    </TextView>
+
+</LinearLayout>

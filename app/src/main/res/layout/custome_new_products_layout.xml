@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:paddingTop="@dimen/_10dp"
+    android:paddingBottom="@dimen/_10dp"
+    android:paddingRight="@dimen/_5dp"
+    android:paddingLeft="@dimen/_5dp">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="@dimen/_5sdp">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardPending"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_150dp"
+                android:background="@drawable/light_black_round_corner"
+                android:foreground="?attr/selectableItemBackground"
+                app:cardBackgroundColor="@color/white">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingTop="@dimen/_10dp"
+                    android:paddingRight="@dimen/_10dp"
+                    android:paddingBottom="@dimen/_10dp">
+
+
+                    <RelativeLayout
+                        android:id="@+id/imgPending"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/_30dp"
+                        android:background="@drawable/new_product_name">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:paddingLeft="@dimen/_30dp"
+                            android:paddingRight="@dimen/_30dp"
+                            android:text="Press N Bind"
+                            android:gravity="center"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_15dp">
+
+                        </TextView>
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@id/imgPending"
+                        android:layout_marginTop="@dimen/_10dp"
+                        android:weightSum="2"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/machine"
+                            android:layout_weight="0.8">
+
+                        </ImageView>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:fontFamily="@font/montserrat_bold"
+                            android:layout_weight="1.2"
+                            android:text="Press Bind is very economical."
+                            android:textColor="@color/light_blue_icon_color">
+
+                        </TextView>
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </FrameLayout>
+
+        <ImageView
+            android:layout_width="@dimen/_100dp"
+            android:layout_height="@dimen/_70dp"
+            android:layout_gravity="right|top"
+            android:visibility="visible"
+            android:layout_marginTop="-24dp"
+            android:src="@drawable/ic_new">
+
+        </ImageView>
+
+    </FrameLayout>
+
+</RelativeLayout>

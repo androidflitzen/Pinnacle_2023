@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EDEFF0"
+    android:padding="@dimen/_20dp">
+
+    <RelativeLayout
+        android:id="@+id/rel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <RelativeLayout
+            android:id="@+id/relBack"
+            android:layout_width="@dimen/_35dp"
+            android:layout_height="@dimen/_35dp"
+            android:foreground="?attr/selectableItemBackground"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="@dimen/_20dp"
+                android:layout_height="@dimen/_20dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/ic_left_arrow"
+                android:tint="@color/dark_blue_color">
+
+            </ImageView>
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/txtDashboardTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_5dp"
+            android:layout_toRightOf="@id/relBack"
+            android:text="@string/my_machines"
+            android:gravity="center"
+            android:fontFamily="@font/montserrat_bold"
+            android:textColor="@color/dark_blue_color"
+            android:textSize="@dimen/_20dp"
+            android:textStyle="bold">
+
+        </TextView>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rel"
+        android:orientation="vertical"
+        android:layout_marginTop="@dimen/_20dp">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerMyMachinesList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layoutAnimation="@anim/layout_animation_fall_down">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+        <include
+            layout="@layout/no_data_layout"
+            android:visibility="gone">
+
+        </include>
+
+    </LinearLayout>
+
+</RelativeLayout>

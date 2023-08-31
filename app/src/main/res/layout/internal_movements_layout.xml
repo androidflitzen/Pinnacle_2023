@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#EDEFF0"
+    android:padding="@dimen/_20dp">
+
+  <!--  <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true"
+        android:scrollbars="none">-->
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/btnNewMovement"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/rel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:id="@+id/relBack"
+                    android:layout_width="@dimen/_35dp"
+                    android:layout_height="@dimen/_35dp"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="@dimen/_20dp"
+                        android:layout_height="@dimen/_20dp"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/ic_left_arrow"
+                        android:tint="@color/dark_blue_color">
+
+                    </ImageView>
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/txtDashboardTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_5dp"
+                    android:layout_toRightOf="@id/relBack"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:text="@string/internal_movements"
+                    android:textColor="@color/dark_blue_color"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:textSize="@dimen/_20dp"
+                    android:textStyle="bold">
+
+                </TextView>
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerInternal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rel"
+                android:layoutAnimation="@anim/layout_animation_fall_down"
+                >
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+            <include
+                layout="@layout/no_data_layout"
+                android:visibility="gone">
+
+            </include>
+
+        </RelativeLayout>
+
+   <!-- </ScrollView>-->
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnNewMovement"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/new_movement"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/light_black_round_corner_1"
+        android:backgroundTint="@color/login_bg_color"
+        android:textColor="@color/white"
+        android:layout_alignParentRight="true"
+        android:paddingLeft="@dimen/_10dp"
+        android:paddingRight="@dimen/_10dp"
+        android:paddingTop="@dimen/_8dp"
+        android:foreground="?attr/selectableItemBackground"
+        android:paddingBottom="@dimen/_8dp"
+        android:textSize="@dimen/_15dp"
+        android:fontFamily="@font/montserrat_bold"
+        android:minHeight="0dp">
+
+    </androidx.appcompat.widget.AppCompatButton>
+
+</RelativeLayout>

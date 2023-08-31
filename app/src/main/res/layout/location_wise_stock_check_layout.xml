@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#EDEFF0"
+    android:padding="@dimen/_20dp">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/rel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:id="@+id/relBack"
+                    android:layout_width="@dimen/_35dp"
+                    android:layout_height="@dimen/_35dp"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="@dimen/_20dp"
+                        android:layout_height="@dimen/_20dp"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/ic_left_arrow"
+                        android:tint="@color/dark_blue_color">
+
+                    </ImageView>
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/txtLocationName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_5dp"
+                    android:layout_toRightOf="@id/relBack"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:text="dfgg"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:textColor="@color/colorPrimary"
+                    android:layout_gravity="center"
+                    android:textSize="@dimen/_20dp"
+                    android:textStyle="bold">
+
+                </TextView>
+
+                <ImageView
+                    android:layout_width="@dimen/_20dp"
+                    android:layout_height="@dimen/_20dp"
+                    android:src="@drawable/ic_right"
+                    android:tint="@color/dark_blue_color"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/_10dp"
+                    >
+
+                </ImageView>
+
+                <TextView
+                    android:id="@+id/txtCrateName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_5dp"
+                    android:layout_toRightOf="@id/relBack"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:text="regerg"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:textColor="@color/dark_blue_color"
+                    android:textSize="@dimen/_20dp"
+                    android:textStyle="bold">
+
+                </TextView>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/recyclerItemType"
+                android:layout_marginTop="@dimen/_10dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_80dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2.9">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.1"
+                        android:background="@color/light_orange">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="@string/part_code"
+                            android:textAlignment="center"
+                            android:fontFamily="@font/montserrat_semibold"
+                            android:textColor="@color/dark_blue_color"
+                            android:textSize="@dimen/_12dp">
+
+                        </TextView>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/_5dp"
+                        android:layout_weight="0.7"
+                        android:background="@color/light_orange">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="Particulars From Spares Master"
+                            android:textAlignment="textStart"
+                            android:fontFamily="@font/montserrat_semibold"
+                            android:layout_marginLeft="@dimen/_5dp"
+                            android:textColor="@color/dark_blue_color"
+                            android:textSize="@dimen/_12dp">
+
+                        </TextView>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.1"
+                        android:layout_marginLeft="@dimen/_5dp"
+                        android:background="@color/light_orange">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="@string/in_stock_qty"
+                            android:textAlignment="center"
+                            android:fontFamily="@font/montserrat_semibold"
+                            android:textColor="@color/dark_blue_color"
+                            android:textSize="@dimen/_12dp">
+
+                        </TextView>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.1"
+                        android:layout_marginLeft="@dimen/_5dp"
+                        android:visibility="gone"
+                        android:background="@color/light_orange">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="@string/action"
+                            android:textAlignment="center"
+                            android:fontFamily="@font/montserrat_semibold"
+                            android:textColor="@color/dark_blue_color"
+                            android:textSize="@dimen/_12dp">
+
+                        </TextView>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerElectricalList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layoutAnimation="@anim/layout_animation_fall_down">
+
+                </androidx.recyclerview.widget.RecyclerView>
+
+                <include
+                    layout="@layout/no_data_layout"
+                    android:visibility="gone">
+
+                </include>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingTop="@dimen/_5dp"
+    android:paddingBottom="@dimen/_5dp"
+    android:layout_marginLeft="@dimen/_10dp"
+    android:layout_marginRight="@dimen/_10dp"
+    >
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:cardBackgroundColor="@color/white"
+        android:background="@drawable/light_black_round_corner">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/recyclerItemType"
+        android:orientation="vertical"
+        android:paddingTop="@dimen/_10dp"
+        android:paddingBottom="@dimen/_10dp"
+        android:paddingRight="@dimen/_10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2.9">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2.9">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.2"
+                    android:background="@color/white">
+
+                    <TextView
+                        android:id="@+id/txtPartCode"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:maxLines="2"
+                        android:text="PLC001"
+                        android:textAlignment="center"
+                        android:textColor="@color/dark_blue_color"
+                        android:fontFamily="@font/montserrat_semibold"
+                        android:textSize="@dimen/_12dp">
+
+                    </TextView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/_5dp"
+                    android:layout_weight="0.6"
+                    android:background="@color/white">
+
+                    <TextView
+                        android:id="@+id/txtPartName"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:maxLines="2"
+                        android:text="PLC FOR THERMAL MACHINE (16)"
+                        android:textAlignment="textStart"
+                        android:textColor="@color/dark_blue_color"
+                        android:layout_marginLeft="@dimen/_10dp"
+                        android:fontFamily="@font/montserrat_semibold"
+                        android:textSize="@dimen/_12dp">
+
+                    </TextView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/_5dp"
+                    android:layout_weight="1.1"
+                    android:background="@color/white">
+
+                    <TextView
+                        android:id="@+id/txtInStockQty"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text=""
+                        android:textAlignment="center"
+                        android:textColor="@color/dark_blue_color"
+                        android:fontFamily="@font/montserrat_semibold"
+                        android:textSize="@dimen/_12dp">
+
+                    </TextView>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

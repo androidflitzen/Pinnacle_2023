@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/_10sdp"
+    android:paddingBottom="@dimen/_10sdp"
+    android:paddingRight="@dimen/_10sdp"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="@dimen/_120sdp"
+        android:layout_height="@dimen/_60sdp"
+        android:src="@drawable/ic_pinnacle_colors_color_logo">
+
+    </ImageView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/dark_blue_color"
+            android:layout_marginLeft="@dimen/_15sdp"
+            android:textSize="@dimen/_15dp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:fontFamily="@font/montserrat_regular"
+            android:text="Do you want to ">
+
+        </TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/dark_blue_color"
+            android:textSize="@dimen/_15dp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="Logout?">
+
+        </TextView>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:gravity="right">
+
+        <TextView
+            android:id="@+id/txtNo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/dark_blue_color"
+            android:layout_marginLeft="@dimen/_17sdp"
+            android:textSize="@dimen/_15dp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:fontFamily="@font/montserrat_bold"
+            android:foreground="?attr/selectableItemBackground"
+            android:padding="@dimen/_10sdp"
+            android:text="NO">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/txtYes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/logout"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:textSize="@dimen/_15dp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:fontFamily="@font/montserrat_bold"
+            android:layout_marginRight="@dimen/_7sdp"
+            android:foreground="?attr/selectableItemBackground"
+            android:padding="@dimen/_10sdp"
+            android:text="YES">
+
+        </TextView>
+
+    </LinearLayout>
+
+</LinearLayout>

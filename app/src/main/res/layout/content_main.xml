@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.flitzen.pinnacle.utils.SlidingPaneLayout
+    android:id="@+id/slide"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+    <!--Drawer fragment-->
+    <fragment
+        android:name="com.flitzen.pinnacle.inventory_management.fragment.DrawerFragment"
+        android:layout_width="@dimen/_200sdp"
+        android:layout_height="match_parent"
+        android:id="@+id/fragment_master">
+    </fragment>
+
+    <!--Detail layout -->
+    <FrameLayout
+        android:id="@+id/fragment_content"
+        android:layout_width="1000dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="#EDEFF0"
+        android:layout_marginLeft="150dp">
+    </FrameLayout>
+
+</com.flitzen.pinnacle.utils.SlidingPaneLayout>

@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/_10dp"
+    android:paddingBottom="@dimen/_10dp"
+    >
+
+    <LinearLayout
+        android:id="@+id/linMainCrate"
+        android:layout_width="wrap_content"
+        android:layout_height="95dp"
+        android:minWidth="95dp"
+        android:background="@drawable/light_black_round_corner_1"
+        android:backgroundTint="@color/light_black"
+        android:layout_marginLeft="@dimen/_10dp"
+        android:paddingTop="@dimen/_10dp"
+        android:paddingBottom="@dimen/_10dp"
+        android:paddingRight="@dimen/_5dp"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/_5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_gravity="center">
+
+            <ImageView
+                android:id="@+id/imgBox"
+                android:layout_width="@dimen/_25dp"
+                android:layout_height="@dimen/_25dp"
+                android:src="@drawable/ic_box"
+                android:layout_gravity="center"
+                app:tint="@color/blue">
+
+            </ImageView>
+
+            <LinearLayout
+                android:id="@+id/llLocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:layout_marginTop="@dimen/_8dp">
+
+                <TextView
+                    android:id="@+id/txtLocation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Location : "
+                    android:fontFamily="@font/montserrat_regular"
+                    android:textColor="@color/light_blue_icon_color"
+                    android:textSize="@dimen/_12dp">
+
+                </TextView>
+
+                <TextView
+                    android:id="@+id/txtLocationId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="test"
+                    android:textColor="@color/dark_blue_color"
+                    android:fontFamily="@font/montserrat_semibold"
+                    android:textSize="@dimen/_12dp">
+
+                </TextView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8dp">
+
+                <TextView
+                    android:id="@+id/txtCrate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Crate : "
+                    android:fontFamily="@font/montserrat_regular"
+                    android:textColor="@color/light_blue_icon_color"
+                    android:textSize="@dimen/_12dp">
+
+                </TextView>
+
+                <TextView
+                    android:id="@+id/txtCrateId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="D001"
+                    android:textColor="@color/dark_blue_color"
+                    android:fontFamily="@font/montserrat_semibold"
+                    android:textSize="@dimen/_12dp">
+
+                </TextView>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txtNoOfPcs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="15 pcs"
+        android:textSize="@dimen/_15dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/_8dp"
+        android:textColor="@color/dark_blue_color"
+        android:fontFamily="@font/montserrat_bold"
+        android:layout_marginLeft="@dimen/_5dp"
+        android:textStyle="bold">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/txtStatus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="available"
+        android:textSize="@dimen/_12dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textColor="@color/green_box_color"
+        android:fontFamily="@font/montserrat_semibold"
+        android:layout_marginLeft="@dimen/_5dp"
+        android:textStyle="bold">
+
+    </TextView>
+
+</LinearLayout>

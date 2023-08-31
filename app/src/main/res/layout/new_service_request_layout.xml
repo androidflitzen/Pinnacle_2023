@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EDEFF0"
+    android:padding="@dimen/_20dp">
+
+    <RelativeLayout
+        android:id="@+id/rel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <RelativeLayout
+            android:id="@+id/relBack"
+            android:layout_width="@dimen/_35dp"
+            android:layout_height="@dimen/_35dp"
+            android:foreground="?attr/selectableItemBackground"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="@dimen/_20dp"
+                android:layout_height="@dimen/_20dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/ic_left_arrow"
+                android:tint="@color/dark_blue_color">
+
+            </ImageView>
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/txtDashboardTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_5dp"
+            android:layout_toRightOf="@id/relBack"
+            android:text="@string/service_request"
+            android:gravity="center"
+            android:fontFamily="@font/montserrat_bold"
+            android:textColor="@color/dark_blue_color"
+            android:textSize="@dimen/_20dp"
+            android:textStyle="bold">
+
+        </TextView>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rel"
+        android:orientation="vertical"
+        android:layout_marginTop="@dimen/_20dp">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerServiceRequestList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layoutAnimation="@anim/layout_animation_fall_down">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+        <include
+            layout="@layout/no_data_layout"
+            android:visibility="gone">
+
+        </include>
+
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnNewRequest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/add_new_request"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/light_black_round_corner_1"
+        android:backgroundTint="@color/login_bg_color"
+        android:textColor="@color/white"
+        android:layout_alignParentRight="true"
+        android:paddingLeft="@dimen/_10dp"
+        android:paddingRight="@dimen/_10dp"
+        android:paddingTop="@dimen/_8dp"
+        android:foreground="?attr/selectableItemBackground"
+        android:paddingBottom="@dimen/_8dp"
+        android:textSize="@dimen/_15dp"
+        android:fontFamily="@font/montserrat_bold"
+        android:minHeight="0dp">
+
+    </androidx.appcompat.widget.AppCompatButton>
+
+</RelativeLayout>

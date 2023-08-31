@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="@dimen/_5dp"
+    android:paddingBottom="@dimen/_5dp">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/light_black_round_corner"
+        app:cardBackgroundColor="@color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/recyclerItemType"
+            android:orientation="vertical"
+            android:paddingTop="@dimen/_10dp"
+            android:paddingBottom="@dimen/_10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2.9">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.1"
+                    android:background="@color/white">
+
+                    <TextView
+                        android:id="@+id/txtPartCode"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:maxLines="2"
+                        android:text="PLC001"
+                        android:textAlignment="center"
+                        android:textColor="@color/dark_blue_color"
+                        android:fontFamily="@font/montserrat_semibold"
+                        android:textSize="@dimen/_12dp">
+
+                    </TextView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/_5dp"
+                    android:layout_weight="0.7"
+                    android:background="@color/white">
+
+                    <TextView
+                        android:id="@+id/txtParticular"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:maxLines="2"
+                        android:text="PLC FOR THERMAL MACHINE (16)"
+                        android:textAlignment="textStart"
+                        android:textColor="@color/dark_blue_color"
+                        android:fontFamily="@font/montserrat_semibold"
+                        android:textSize="@dimen/_12dp">
+
+                    </TextView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/_5dp"
+                    android:layout_weight="1.1"
+                    android:background="@color/white">
+
+                    <TextView
+                        android:id="@+id/txtInStockQty"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text=""
+                        android:textAlignment="center"
+                        android:textColor="@color/dark_blue_color"
+                        android:fontFamily="@font/montserrat_semibold"
+                        android:textSize="@dimen/_12dp">
+
+                    </TextView>
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/relLocate"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/_5dp"
+                    android:paddingLeft="@dimen/_5dp"
+                    android:paddingRight="@dimen/_5dp"
+                    android:layout_weight="1.1"
+                    android:visibility="gone"
+                    android:background="@color/white">
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnLocate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/_30dp"
+                        android:background="@drawable/light_black_round_corner_1"
+                        android:backgroundTint="@color/green_box_color"
+                        android:text="@string/locate"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:layout_centerInParent="true"
+                        android:foreground="?attr/selectableItemBackground"
+                        android:textSize="@dimen/_10dp">
+
+                    </androidx.appcompat.widget.AppCompatButton>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

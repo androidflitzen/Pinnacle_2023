@@ -1,0 +1,434 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EDEFF0"
+    android:padding="@dimen/_20dp">
+
+    <!--  <ScrollView
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:fillViewport="true"
+          android:scrollbars="none">-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/rel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/relBack"
+                android:layout_width="@dimen/_35dp"
+                android:layout_height="@dimen/_35dp"
+                android:foreground="?attr/selectableItemBackground"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="@dimen/_20dp"
+                    android:layout_height="@dimen/_20dp"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/ic_left_arrow"
+                    android:tint="@color/dark_blue_color">
+
+                </ImageView>
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/txtDashboardTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_5dp"
+                android:layout_toRightOf="@id/relBack"
+                android:fontFamily="@font/montserrat_bold"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="@string/stock_alerts"
+                android:textColor="@color/dark_blue_color"
+                android:textSize="@dimen/_20dp"
+                android:textStyle="bold">
+
+            </TextView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/recyclerItemType"
+            android:layout_marginTop="@dimen/_20dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="@dimen/_10dp"
+                android:paddingBottom="@dimen/_10dp"
+                android:weightSum="3">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardZero"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_100dp"
+                    android:layout_marginLeft="@dimen/_10dp"
+                    android:layout_marginRight="@dimen/_10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/light_black_round_corner"
+                    android:foreground="?attr/selectableItemBackground"
+                    app:cardBackgroundColor="@color/zero_alert"
+                    app:cardElevation="@dimen/_5dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="center_vertical"
+                        android:padding="@dimen/_10dp"
+                        android:weightSum="2">
+
+                        <TextView
+                            android:id="@+id/txtZeroStock"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:fontFamily="@font/montserrat_bold"
+                            android:text="@string/zero_stock"
+                            android:textColor="@color/white"
+                            android:gravity="center"
+                            android:layout_marginLeft="@dimen/_5dp"
+                            android:textSize="@dimen/_19dp">
+
+                        </TextView>
+
+                        <LinearLayout
+                            android:id="@+id/linZero"
+                            android:layout_width="@dimen/_70dp"
+                            android:layout_height="@dimen/_70dp"
+                            android:background="@drawable/number_circle"
+                            android:layout_centerVertical="true"
+                            android:layout_alignParentRight="true"
+                            android:backgroundTint="@color/linZero"
+                            android:layout_marginRight="@dimen/_5dp"
+                            android:gravity="center">
+
+                            <ImageView
+                                android:id="@+id/imgZero"
+                                android:layout_width="@dimen/_40dp"
+                                android:layout_height="@dimen/_40dp"
+                                android:layout_alignParentRight="true"
+                                android:src="@drawable/ic_inventory"
+                                android:tint="@color/white">
+
+                            </ImageView>
+
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardLow"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_100dp"
+                    android:layout_marginLeft="@dimen/_10dp"
+                    android:layout_marginRight="@dimen/_10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/light_black_round_corner"
+                    android:foreground="?attr/selectableItemBackground"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardElevation="@dimen/_5dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/_10dp">
+
+                        <TextView
+                            android:id="@+id/txtLowStock"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:fontFamily="@font/montserrat_bold"
+                            android:text="@string/low_stock"
+                            android:textColor="@color/dark_blue_color"
+                            android:gravity="center"
+                            android:layout_marginLeft="@dimen/_5dp"
+                            android:textSize="@dimen/_19dp">
+
+                        </TextView>
+
+                        <LinearLayout
+                            android:id="@+id/linLow"
+                            android:layout_width="@dimen/_70dp"
+                            android:layout_height="@dimen/_70dp"
+                            android:background="@drawable/number_circle"
+                            android:backgroundTint="@color/lincommon"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="@dimen/_5dp"
+                            android:gravity="center">
+
+                            <ImageView
+                                android:id="@+id/imgLow"
+                                android:layout_width="@dimen/_40dp"
+                                android:layout_height="@dimen/_40dp"
+                                android:layout_alignParentRight="true"
+                                android:src="@drawable/ic_inventory"
+                                android:tint="@color/dark_blue_color">
+
+                            </ImageView>
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardMax"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_100dp"
+                    android:layout_marginLeft="@dimen/_10dp"
+                    android:layout_marginRight="@dimen/_10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/light_black_round_corner"
+                    android:foreground="?attr/selectableItemBackground"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardElevation="@dimen/_5dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/_10dp">
+
+                        <TextView
+                            android:id="@+id/txtMaxStock"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:fontFamily="@font/montserrat_bold"
+                            android:text="@string/max_stock"
+                            android:gravity="center_vertical"
+                            android:textColor="@color/dark_blue_color"
+                            android:layout_marginLeft="@dimen/_5dp"
+                            android:textSize="@dimen/_19dp">
+
+                        </TextView>
+
+                        <LinearLayout
+                            android:id="@+id/linMax"
+                            android:layout_width="@dimen/_70dp"
+                            android:layout_height="@dimen/_70dp"
+                            android:background="@drawable/number_circle"
+                            android:backgroundTint="@color/lincommon"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="@dimen/_5dp"
+                            android:gravity="center">
+
+                            <ImageView
+                                android:id="@+id/imgMax"
+                                android:layout_width="@dimen/_40dp"
+                                android:layout_height="@dimen/_40dp"
+                                android:layout_alignParentRight="true"
+                                android:src="@drawable/ic_inventory"
+                                android:tint="@color/dark_blue_color">
+
+                            </ImageView>
+
+                        </LinearLayout>
+
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_70dp"
+                android:layout_marginLeft="@dimen/_10dp"
+                android:layout_marginTop="@dimen/_10dp"
+                android:layout_marginRight="@dimen/_10dp"
+                android:orientation="horizontal"
+                android:weightSum="2.9">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.2"
+                    android:background="@color/light_orange">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/montserrat_semibold"
+                        android:gravity="center"
+                        android:text="@string/part_code"
+                        android:textAlignment="center"
+                        android:textColor="@color/dark_blue_color"
+                        android:textSize="@dimen/_12dp">
+
+                    </TextView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/_5dp"
+                    android:layout_weight="0.6"
+                    android:background="@color/light_orange">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/_10dp"
+                        android:fontFamily="@font/montserrat_semibold"
+                        android:gravity="center"
+                        android:text="Particulars From Spares Master"
+                        android:textAlignment="textStart"
+                        android:textColor="@color/dark_blue_color"
+                        android:textSize="@dimen/_12dp">
+
+                    </TextView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/_5dp"
+                    android:layout_weight="1.1"
+                    android:background="@color/light_orange">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/montserrat_semibold"
+                        android:gravity="center"
+                        android:text="@string/in_stock_qty"
+                        android:textAlignment="center"
+                        android:textColor="@color/dark_blue_color"
+                        android:textSize="@dimen/_12dp">
+
+                    </TextView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/_5dp"
+                    android:layout_weight="1.1"
+                    android:background="@color/light_orange"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/montserrat_semibold"
+                        android:gravity="center"
+                        android:text="@string/action"
+                        android:textAlignment="center"
+                        android:textColor="@color/dark_blue_color"
+                        android:textSize="@dimen/_12dp">
+
+                    </TextView>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:id="@+id/relZero"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyclerStockAlertsZero"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layoutAnimation="@anim/layout_animation_fall_down">
+
+                    </androidx.recyclerview.widget.RecyclerView>
+
+                    <include
+                        layout="@layout/no_data_layout"
+                        android:visibility="gone">
+
+                    </include>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/relLow"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyclerStockAlertsLow"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layoutAnimation="@anim/layout_animation_fall_down">
+
+                    </androidx.recyclerview.widget.RecyclerView>
+
+                    <include
+                        layout="@layout/no_data_layout"
+                        android:visibility="gone">
+
+                    </include>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/relMax"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyclerStockAlertsMax"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layoutAnimation="@anim/layout_animation_fall_down">
+
+                    </androidx.recyclerview.widget.RecyclerView>
+
+                    <include
+                        layout="@layout/no_data_layout"
+                        android:visibility="gone">
+
+                    </include>
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!--</ScrollView>-->
+
+</LinearLayout>

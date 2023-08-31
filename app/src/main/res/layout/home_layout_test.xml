@@ -1,0 +1,540 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EDEFF0">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="@dimen/_20dp">
+
+            <TextView
+                android:id="@+id/txtDashboardTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="@string/dashboard"
+                android:textColor="@color/dark_blue_color"
+                android:textSize="@dimen/_30dp"
+                android:textStyle="bold">
+
+            </TextView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/txtDashboardTitle"
+                android:layout_marginTop="@dimen/_20dp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:paddingRight="@dimen/_10dp">
+
+                    <LinearLayout
+                        android:id="@+id/lin1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1">
+
+                            <FrameLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:paddingTop="@dimen/_5sdp">
+
+                                <androidx.cardview.widget.CardView
+                                    android:id="@+id/cardPending"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginRight="@dimen/_10dp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/light_black_round_corner"
+                                    android:foreground="?attr/selectableItemBackground"
+                                    app:cardBackgroundColor="@color/login_bg_color">
+
+                                    <RelativeLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:padding="@dimen/_10dp">
+
+
+                                        <ImageView
+                                            android:id="@+id/imgPending"
+                                            android:layout_width="@dimen/_30dp"
+                                            android:layout_height="@dimen/_30dp"
+                                            android:src="@drawable/ic_pending"
+                                            android:tint="#fbe1ca">
+
+                                        </ImageView>
+
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_below="@id/imgPending"
+                                            android:layout_marginTop="@dimen/_10dp"
+                                            android:fontFamily="@font/montserrat_bold"
+                                            android:text="Pending \nOrders"
+                                            android:textColor="@color/white">
+
+                                        </TextView>
+
+                                    </RelativeLayout>
+
+
+                                </androidx.cardview.widget.CardView>
+
+                            </FrameLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/relPendingCount"
+                                android:layout_width="@dimen/_25dp"
+                                android:layout_height="@dimen/_25dp"
+                                android:layout_gravity="right|top"
+                                android:layout_marginBottom="@dimen/_10dp"
+                                android:visibility="gone"
+                                android:background="@drawable/number_circle">
+
+                                <TextView
+                                    android:id="@+id/txtPendingOrderCount"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:text="20"
+                                    android:fontFamily="@font/montserrat_bold"
+                                    android:textColor="@color/white">
+
+                                </TextView>
+
+                            </RelativeLayout>
+
+                        </FrameLayout>
+
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1">
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:paddingTop="@dimen/_5sdp"
+                            android:paddingRight="@dimen/_5sdp">
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cardDelivered"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="@dimen/_10dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/light_black_round_corner"
+                            android:foreground="?attr/selectableItemBackground"
+                            app:cardBackgroundColor="@color/green_box_color">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:padding="@dimen/_10dp">
+
+
+                                <ImageView
+                                    android:id="@+id/imgDelivered"
+                                    android:layout_width="@dimen/_30dp"
+                                    android:layout_height="@dimen/_30dp"
+                                    android:src="@drawable/ic_delivered_order"
+                                    android:tint="#e8eda3">
+
+                                </ImageView>
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@id/imgDelivered"
+                                    android:layout_marginTop="@dimen/_10dp"
+                                    android:fontFamily="@font/montserrat_bold"
+                                    android:text="Delivered \nOrders"
+                                    android:textColor="@color/white">
+
+                                </TextView>
+
+                            </RelativeLayout>
+
+
+                        </androidx.cardview.widget.CardView>
+
+                        </FrameLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/relDeliveredCount"
+                                android:layout_width="@dimen/_25dp"
+                                android:layout_height="@dimen/_25dp"
+                                android:layout_gravity="right|top"
+                                android:layout_marginBottom="@dimen/_10dp"
+                                android:visibility="gone"
+                                android:background="@drawable/number_circle">
+
+                                <TextView
+                                    android:id="@+id/txtDeliveredOrderCount"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:text="20"
+                                    android:fontFamily="@font/montserrat_bold"
+                                    android:textColor="@color/white">
+
+                                </TextView>
+
+                            </RelativeLayout>
+
+                        </FrameLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lin2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/lin1"
+                        android:layout_marginTop="@dimen/_20dp"
+                        android:paddingRight="@dimen/_5sdp"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cardStockCheck"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="@dimen/_10dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/light_black_round_corner"
+                            android:foreground="?attr/selectableItemBackground"
+                            app:cardBackgroundColor="@color/white">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:padding="@dimen/_10dp">
+
+
+                                <ImageView
+                                    android:id="@+id/imgStockCheck"
+                                    android:layout_width="@dimen/_30dp"
+                                    android:layout_height="@dimen/_30dp"
+                                    android:src="@drawable/ic_stock_check"
+                                    android:tint="@color/light_blue_icon_color">
+
+                                </ImageView>
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@id/imgStockCheck"
+                                    android:layout_marginTop="@dimen/_10dp"
+                                    android:fontFamily="@font/montserrat_bold"
+                                    android:text="Stock \nCheck"
+                                    android:textColor="@color/dark_blue_color"
+                                    android:textStyle="bold">
+
+                                </TextView>
+
+                            </RelativeLayout>
+
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cardStockAlerts"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="@dimen/_10dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/light_black_round_corner"
+                            android:foreground="?attr/selectableItemBackground"
+                            app:cardBackgroundColor="@color/white">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:padding="@dimen/_10dp">
+
+
+                                <ImageView
+                                    android:id="@+id/imgStockAlerts"
+                                    android:layout_width="@dimen/_30dp"
+                                    android:layout_height="@dimen/_30dp"
+                                    android:src="@drawable/ic_stock_alerts"
+                                    android:tint="@color/light_blue_icon_color">
+
+                                </ImageView>
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@id/imgStockAlerts"
+                                    android:layout_marginTop="@dimen/_10dp"
+                                    android:fontFamily="@font/montserrat_bold"
+                                    android:text="Stock \nAlerts"
+                                    android:textColor="@color/dark_blue_color"
+                                    android:textStyle="bold">
+
+                                </TextView>
+
+                            </RelativeLayout>
+
+
+                        </androidx.cardview.widget.CardView>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lin3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/lin2"
+                        android:layout_marginTop="@dimen/_20dp"
+                        android:paddingRight="@dimen/_5sdp"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cardInternal"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:layout_marginRight="@dimen/_10dp"
+                            android:background="@drawable/light_black_round_corner"
+                            android:foreground="?attr/selectableItemBackground"
+                            app:cardBackgroundColor="@color/white">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:padding="@dimen/_10dp">
+
+
+                                <ImageView
+                                    android:id="@+id/imgInternalMove"
+                                    android:layout_width="@dimen/_30dp"
+                                    android:layout_height="@dimen/_30dp"
+                                    android:src="@drawable/ic_internal_movement"
+                                    android:tint="@color/light_blue_icon_color">
+
+                                </ImageView>
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@id/imgInternalMove"
+                                    android:layout_marginTop="@dimen/_10dp"
+                                    android:fontFamily="@font/montserrat_bold"
+                                    android:text="Internal \nMovements"
+                                    android:textColor="@color/dark_blue_color"
+                                    android:textStyle="bold">
+
+                                </TextView>
+
+                            </RelativeLayout>
+
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cardPurchase"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="@dimen/_10dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/light_black_round_corner"
+                            android:foreground="?attr/selectableItemBackground"
+                            android:visibility="invisible"
+                            app:cardBackgroundColor="@color/white">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:padding="@dimen/_10dp">
+
+
+                                <ImageView
+                                    android:id="@+id/imgPurchase"
+                                    android:layout_width="@dimen/_30dp"
+                                    android:layout_height="@dimen/_30dp"
+                                    android:src="@drawable/ic_purchuse_order"
+                                    android:tint="@color/light_blue_icon_color">
+
+                                </ImageView>
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@id/imgPurchase"
+                                    android:layout_marginTop="@dimen/_10dp"
+                                    android:fontFamily="@font/montserrat_bold"
+                                    android:text="Purchase \nOrders"
+                                    android:textColor="@color/dark_blue_color"
+                                    android:textStyle="bold">
+
+                                </TextView>
+
+                            </RelativeLayout>
+
+
+                        </androidx.cardview.widget.CardView>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/lin3"
+                        android:layout_marginTop="@dimen/_20dp"
+                        android:orientation="horizontal"
+                        android:visibility="gone"
+                        android:weightSum="2">
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cardJobWork"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="@dimen/_10dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/light_black_round_corner"
+                            android:foreground="?attr/selectableItemBackground"
+                            app:cardBackgroundColor="@color/white">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:padding="@dimen/_10dp">
+
+
+                                <ImageView
+                                    android:id="@+id/imgJobWork"
+                                    android:layout_width="@dimen/_30dp"
+                                    android:layout_height="@dimen/_30dp"
+                                    android:src="@drawable/ic_job_work"
+                                    android:tint="@color/light_blue_icon_color">
+
+                                </ImageView>
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@id/imgJobWork"
+                                    android:layout_marginTop="@dimen/_10dp"
+                                    android:fontFamily="@font/montserrat_bold"
+                                    android:text="Job \nWorks"
+                                    android:textColor="@color/dark_blue_color"
+                                    android:textStyle="bold">
+
+                                </TextView>
+
+                            </RelativeLayout>
+
+
+                        </androidx.cardview.widget.CardView>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1">
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/_10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/light_black_round_corner"
+                        app:cardBackgroundColor="@color/white">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <RelativeLayout
+                                android:id="@+id/rel"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="@dimen/_10dp">
+
+                                <ImageView
+                                    android:id="@+id/imgbell"
+                                    android:layout_width="@dimen/_30dp"
+                                    android:layout_height="@dimen/_30dp"
+                                    android:layout_centerVertical="true"
+                                    android:src="@drawable/ic_bell"
+                                    android:tint="@color/light_blue_icon_color">
+
+                                </ImageView>
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginLeft="@dimen/_20dp"
+                                    android:layout_toRightOf="@id/imgbell"
+                                    android:fontFamily="@font/montserrat_bold"
+                                    android:text="Recent Activities"
+                                    android:textColor="@color/dark_blue_color"
+                                    android:textSize="@dimen/_18dp"
+                                    android:textStyle="bold">
+
+                                </TextView>
+
+                            </RelativeLayout>
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/recyclerRecentActivity"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_below="@id/rel">
+
+                            </androidx.recyclerview.widget.RecyclerView>
+
+                            <include
+                                layout="@layout/no_data_layout"
+                                android:visibility="gone">
+
+                            </include>
+
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>
